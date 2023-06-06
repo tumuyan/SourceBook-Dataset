@@ -27,19 +27,51 @@
 |  钢琴谱  |  piano  |  钢琴谱电子档，非出版物  |    |   |
 |  漫画  |  manga  |  OpenMantra 漫画机器翻译评估数据集  |    |  https://github.com/mantra-inc/open-mantra-dataset  |
 
+
+## 关于模型
+已经使用[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/)跑通流程，正在训练基于官方预训练模型的2x微调模型。
+
+如若一切顺利，会在Release页面提供转换后的ncnn模型；如果不理想，再更新数据重炼。
+
+
 ## 目录结构
 ```
 ├─beforecrop            // 分辨率>480*480未切片的图片，备用
+└─test                  // 测试评估数据，未切分
 └─sourcebook            // Real-ESRGAN 训练数据集
     ├─meta_info         // 图像文件清单
     ├─sourcebook_hr     // 高分辨率图像
     └─sourcebook_lr     // 低分辨率图像
 ```
 
-## 关于模型
-已经使用[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/)跑通流程，正在训练基于官方预训练模型的2x微调模型。
+## 例图
+如下例图左侧为数据集中使用字体合成的高分辨率纯文本图片，右侧为对应的低分辨率图片使用nearest放大2倍的图片。
 
-如若一切顺利，会在Release页面提供转换后的ncnn模型；如果不理想，再更新数据重炼。
+sourcehan2
+<figure class="half">
+    <img src="./sourcebook/sourcebook_hr/sourcehan2_2.jpg">
+    <img src="./src/sourcehan2_2.jpg">
+</figure>
+
+sourcehan1
+<figure class="half">
+    <img src="./sourcebook/sourcebook_hr/sourcehan1_1.jpg">
+    <img src="./src/sourcehan1_1.jpg">
+</figure>
+
+sourcehan
+<figure class="half">
+    <img src="./sourcebook/sourcebook_hr/sourcehan_1.jpg">
+    <img src="./src/sourcehan_1.jpg">
+</figure>
+
+
+wenkai
+<figure class="half">
+    <img src="./sourcebook/sourcebook_hr/wenkai_1.jpg">
+    <img src="./src/wenkai_1.jpg">
+</figure>
+
 
 ## 相关法律
 > 中华人民共和国著作权法
