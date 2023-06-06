@@ -1,6 +1,6 @@
 # README
 ## 书之溯源 SourceBook
-把低分辨率的扫描书恢复为高分辨率，是我多年夙愿。在我了解到有超分辨率这一技术的时候，就寄期望于能够用超分技术达成目的。
+把低分辨率的扫描书恢复为高分辨率，是我多年夙愿。在了解到有超分辨率这一技术的时候，我就寄期望于能够用超分技术达成目的。
 
 时间一天天过去，最后还是自己不完美地做了实现。
 
@@ -14,6 +14,7 @@
 |----|----|----|----|----|
 | 纯文本  |  sourcehan2  | 使用思源宋体合成纯文本图片，包含常见中英文字符及假名  | 黑白 | https://github.com/adobe-fonts/source-han-serif   |
 | 纯文本  |  sourcehan  | 使用思源宋体合成纯文本图片，包含千字文及假名  |  灰阶  |   https://github.com/adobe-fonts/source-han-serif |
+| 纯文本  |  sourcehan1  | 使用思源黑体合成纯文本图片，包含千字文及假名  |  灰阶  |   https://github.com/adobe-fonts/source-han-sans|
 | 纯文本  | wenkai  |  使用蒹葭文楷合成纯文本图片，包含千字文及假名  |  灰阶  | https://github.com/lxgw/LxgwWenKai   |
 | 纯文本  | crimson |  使用Crimson Text合成纯文本图片，包含英文衬线体普通、粗体、斜体，降采样后无处理  |  灰阶  | https://fonts.google.com/specimen/Crimson+Text  |
 |  书籍  |  realbook  |  图书《圈圈教你玩USB》节选扫描，作者: 刘荣  | 灰阶 |  见 [相关法律](#相关法律)  |

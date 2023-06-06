@@ -134,6 +134,15 @@ sourcebook_hr/realbook96.png, sourcebook_lr/realbook96.png
 sourcebook_hr/realbook97.png, sourcebook_lr/realbook97.png
 sourcebook_hr/realbook98.png, sourcebook_lr/realbook98.png
 sourcebook_hr/realbook99.png, sourcebook_lr/realbook99.png
+sourcebook_hr/sourcehan1_0.jpg, sourcebook_lr/sourcehan1_0.jpg
+sourcebook_hr/sourcehan1_1.jpg, sourcebook_lr/sourcehan1_1.jpg
+sourcebook_hr/sourcehan1_2.jpg, sourcebook_lr/sourcehan1_2.jpg
+sourcebook_hr/sourcehan1_3.jpg, sourcebook_lr/sourcehan1_3.jpg
+sourcebook_hr/sourcehan1_4.jpg, sourcebook_lr/sourcehan1_4.jpg
+sourcebook_hr/sourcehan1_5.jpg, sourcebook_lr/sourcehan1_5.jpg
+sourcebook_hr/sourcehan1_6.jpg, sourcebook_lr/sourcehan1_6.jpg
+sourcebook_hr/sourcehan1_7.jpg, sourcebook_lr/sourcehan1_7.jpg
+sourcebook_hr/sourcehan1_8.jpg, sourcebook_lr/sourcehan1_8.jpg
 sourcebook_hr/sourcehan2_0.jpg, sourcebook_lr/sourcehan2_0.jpg
 sourcebook_hr/sourcehan2_1.jpg, sourcebook_lr/sourcehan2_1.jpg
 sourcebook_hr/sourcehan2_10.jpg, sourcebook_lr/sourcehan2_10.jpg
