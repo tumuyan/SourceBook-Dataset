@@ -29,17 +29,18 @@
 
 
 ## 关于模型
-已经使用[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/)跑通流程并训练基于官方预训练模型的2x微调模型。
+我已经使用[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/)跑通流程并训练基于官方预训练模型的2x微调模型。
 
-扫描书修复效果、与官方模型对比见： [样本1](https://imgsli.com/MTg0OTQ5) [样本1](https://imgsli.com/MTg0OTUy)
+扫描书修复效果、与官方模型对比图见： [样本1](https://imgsli.com/MTg0OTQ5) [样本1](https://imgsli.com/MTg0OTUy)
 
-| 样本 | SourceBook-X2 | X4plus-Anime | X4plus      | Animevideov3-X4 |
-|----|---------------|--------------|-------------|-----------------|
-| 21 | 34.46         | 37.22        | 115.67      | 5               |
-| 40 | 47.47         | 49.65        | 159.14      | 6.41            |
-| 平均 | X1            | X1.06        | X3.35       | X0.14           |
+| 模型 | SourceBook-X2 | X4plus | X4plus-Anime   | Animevideov3-X4 |
+|:--:|:-------------:|:------------:|:-----------:|:---------------:|
+| 缩放倍率 | 2            | 4        | 4       | 4           |
+| 速度 | Baseline            | 0.29x        | 0.94x       | 7.14x           |
 
-ncnn模型及Windows推理程序见本仓库release页面 ，pth模型下载（训练log也在huggingface仓库中）：https://huggingface.co/tumuyan/SourceBook/tree/pth/models
+ncnn模型及Windows推理程序见本仓库release页面：https://github.com/tumuyan/SourceBook-Dataset/releases  
+
+pth模型下载（训练log也在huggingface仓库中）：https://huggingface.co/tumuyan/SourceBook/tree/pth/models  
 
 ## 目录结构
 ```
