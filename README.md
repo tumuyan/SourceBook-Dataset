@@ -29,10 +29,17 @@
 
 
 ## 关于模型
-已经使用[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/)跑通流程，正在训练基于官方预训练模型的2x微调模型。
+已经使用[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/)跑通流程并训练基于官方预训练模型的2x微调模型。
 
-如若一切顺利，会在Release页面提供转换后的ncnn模型；如果不理想，再更新数据重炼。
+扫描书修复效果、与官方模型对比见： [样本1](https://imgsli.com/MTg0OTQ5) [样本1](https://imgsli.com/MTg0OTUy)
 
+| 样本 | SourceBook-X2 | X4plus-Anime | X4plus      | Animevideov3-X4 |
+|----|---------------|--------------|-------------|-----------------|
+| 21 | 34.46         | 37.22        | 115.67      | 5               |
+| 40 | 47.47         | 49.65        | 159.14      | 6.41            |
+| 平均 | X1            | X1.06        | X3.35       | X0.14           |
+
+ncnn模型及Windows推理程序见本仓库release页面 ，pth模型下载（训练log也在huggingface仓库中）：https://huggingface.co/tumuyan/SourceBook/tree/pth/models
 
 ## 目录结构
 ```
