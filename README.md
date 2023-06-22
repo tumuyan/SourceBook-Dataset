@@ -6,6 +6,7 @@
 
 书之溯源即恢复书本身的模样，亦是书之夙愿的谐音；SourceBook中的Source是追溯的意思，也指代数据集中的一部分图片使用思源字体（Source Han）。
 
+![logo](src/sourcebook.png)
 
 ## 关于数据集
 训练使用的数据集包含多个部分的内容：
@@ -29,18 +30,29 @@
 
 
 ## 关于模型
-我已经使用[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/)跑通流程并训练基于官方预训练模型的2x微调模型。
+我已经使用[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/)和此数据集训练基于官方x2plus预训练模型的2x微调模型。
 
-扫描书修复效果、与官方模型对比图见： [样本1](https://imgsli.com/MTg0OTQ5) [样本1](https://imgsli.com/MTg0OTUy)
+
+扫描书修复效果-输入输出对比图： [样本](https://imgsli.com/MTg1MTA1/0/5)   
+扫描书修复效果-与官方模型对比： [样本1](https://imgsli.com/MTg0OTQ5) [样本1](https://imgsli.com/MTg0OTUy)
+
 
 | 模型 | SourceBook-X2 | X4plus | X4plus-Anime   | Animevideov3-X4 |
 |:--:|:-------------:|:------------:|:-----------:|:---------------:|
 | 缩放倍率 | 2            | 4        | 4       | 4           |
 | 速度 | Baseline            | 0.29x        | 0.94x       | 7.14x           |
 
-ncnn模型及Windows推理程序见本仓库release页面：https://github.com/tumuyan/SourceBook-Dataset/releases  
+* 以上评估均使用ncnn模型测试
 
-pth模型下载（训练log也在huggingface仓库中）：https://huggingface.co/tumuyan/SourceBook/tree/pth/models  
+
+## 下载
+ncnn模型及Windows、Linux推理程序见本仓库release页面: https://github.com/tumuyan/SourceBook-Dataset/releases  
+
+pth模型下载（训练log也在huggingface仓库中）: https://huggingface.co/tumuyan/SourceBook/tree/pth/models  
+
+colab推理（使用pth模型）: https://colab.research.google.com/drive/1E2IEo1zUapxMuOb2Px3VYy_zhDsu9OTR?usp=sharing
+
+
 
 ## 目录结构
 ```
