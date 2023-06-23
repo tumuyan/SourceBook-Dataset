@@ -13,10 +13,11 @@
 
 | 类型 | 文件前缀 | 来源 | 备注 | 链接 |
 |----|----|----|----|----|
-| 纯文本  |  sourcehan2  | 使用思源宋体合成纯文本图片，包含常见中英文字符及假名  | 黑白 | https://github.com/adobe-fonts/source-han-serif   |
+| 纯文本  |  sourcehan2  | 使用思源宋体合成纯文本图片，包含常见中英文字符及假名  | v1黑白，v2灰阶 | https://github.com/adobe-fonts/source-han-serif   |
 | 纯文本  |  sourcehan  | 使用思源宋体合成纯文本图片，包含千字文及假名  |  灰阶  |   https://github.com/adobe-fonts/source-han-serif |
 | 纯文本  |  sourcehan1  | 使用思源黑体合成纯文本图片，包含千字文及假名  |  灰阶  |   https://github.com/adobe-fonts/source-han-sans|
 | 纯文本  | wenkai  |  使用蒹葭文楷合成纯文本图片，包含千字文及假名  |  灰阶  | https://github.com/lxgw/LxgwWenKai   |
+| 纯文本  |  genyomin  | 使用源樣明朝体合成纯文本图片，较其他样本加大字号，包含千字文及常见繁体字  |  灰阶  | https://github.com/ButTaiwan/genyo-font |
 | 纯文本  | crimson |  使用Crimson Text合成纯文本图片，包含英文衬线体普通、粗体、斜体，降采样后无处理  |  灰阶  | https://fonts.google.com/specimen/Crimson+Text  |
 |  书籍  |  realbook  |  图书《圈圈教你玩USB》节选扫描，作者: 刘荣  | 灰阶 |  见 [相关法律](#相关法律)  |
 |  彩图  |  color  |  为避免色彩推理错误，添加彩图数据。含colored manga 漫画数据集及其他一些ACG彩色图片，缩小1/2使用  | 彩色 |  https://www.kaggle.com/datasets/ultraamvking/colored-manga  |
@@ -53,7 +54,6 @@ pth模型下载（训练log也在huggingface仓库中）: https://huggingface.co
 colab推理（使用pth模型）: https://colab.research.google.com/drive/1E2IEo1zUapxMuOb2Px3VYy_zhDsu9OTR?usp=sharing
 
 
-
 ## 目录结构
 ```
 ├─beforecrop            // 分辨率>480*480未切片的图片，备用
@@ -63,35 +63,6 @@ colab推理（使用pth模型）: https://colab.research.google.com/drive/1E2IEo
     ├─sourcebook_hr     // 高分辨率图像
     └─sourcebook_lr     // 低分辨率图像
 ```
-
-## 例图
-如下例图左侧为数据集中使用字体合成的高分辨率纯文本图片，右侧为对应的低分辨率图片使用nearest放大2倍的图片。
-
-sourcehan2
-<figure class="half">
-    <img src="./sourcebook/sourcebook_hr/sourcehan2_2.jpg">
-    <img src="./src/sourcehan2_2.jpg">
-</figure>
-
-sourcehan1
-<figure class="half">
-    <img src="./sourcebook/sourcebook_hr/sourcehan1_1.jpg">
-    <img src="./src/sourcehan1_1.jpg">
-</figure>
-
-sourcehan
-<figure class="half">
-    <img src="./sourcebook/sourcebook_hr/sourcehan_1.jpg">
-    <img src="./src/sourcehan_1.jpg">
-</figure>
-
-
-wenkai
-<figure class="half">
-    <img src="./sourcebook/sourcebook_hr/wenkai_1.jpg">
-    <img src="./src/wenkai_1.jpg">
-</figure>
-
 
 ## 相关法律
 > 中华人民共和国著作权法
