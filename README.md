@@ -16,6 +16,7 @@
 | 纯文本  |  sourcehan2  | 使用思源宋体合成纯文本图片，包含常见中英文字符及假名  | v1黑白，v2灰阶 | https://github.com/adobe-fonts/source-han-serif   |
 | 纯文本  |  sourcehan  | 使用思源宋体合成纯文本图片，包含千字文及假名  |  灰阶  |   https://github.com/adobe-fonts/source-han-serif |
 | 纯文本  |  sourcehan1  | 使用思源黑体合成纯文本图片，包含千字文及假名  |  灰阶  |   https://github.com/adobe-fonts/source-han-sans|
+| 纯文本  |  sourcehan_b  | 使用思源黑体合成纯文本图片，包含千字文及假名，缩小字号并使用jpeg 60%压缩  |  彩色  |   https://github.com/adobe-fonts/source-han-sans|
 | 纯文本  | wenkai  |  使用蒹葭文楷合成纯文本图片，包含千字文及假名  |  灰阶  | https://github.com/lxgw/LxgwWenKai   |
 | 纯文本  |  genyomin  | 使用源樣明朝体合成纯文本图片，较其他样本加大字号，包含千字文及常见繁体字  |  灰阶  | https://github.com/ButTaiwan/genyo-font |
 | 纯文本  | crimson |  使用Crimson Text合成纯文本图片，包含英文衬线体普通、粗体、斜体，降采样后无处理  |  灰阶  | https://fonts.google.com/specimen/Crimson+Text  |

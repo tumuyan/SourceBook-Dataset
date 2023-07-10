@@ -2,3 +2,4 @@ result*
 *.zip
 *.exe
 test_x2/*
+sourcebook/meta_info/kaggle.json
