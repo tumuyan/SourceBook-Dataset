@@ -1,0 +1,139 @@
+
+name = "esrgan_sourcebook_mono_2x"
+model_type = "image"
+scale = 2
+use_amp = false
+bfloat16 = false
+fast_matmul = true
+#compile = true
+#manual_seed = 1024
+
+[datasets.train]
+type = "paired"
+dataroot_gt = 'datasets/sourcebook/sourcebook_hr'
+dataroot_lq = 'datasets/sourcebook/sourcebook_lr'
+patch_size = 64
+batch_size = 32
+#accumulate = 1
+augmentation = [ "none", "mixup", "cutmix", "resizemix", "cutblur" ]
+aug_prob = [ 0.5, 0.1, 0.1, 0.1, 0.5 ]
+color = "y"
+
+[datasets.val]
+name = "val"
+type = "paired"
+dataroot_gt = 'datasets/var/gt'
+dataroot_lq = 'datasets/var/lr'
+color = "y"
+
+[val]
+val_freq = 100
+tile = 200
+#[val.metrics.psnr]
+#type = "calculate_psnr"
+#[val.metrics.ssim]
+#type = "calculate_ssim"
+#[val.metrics.dists]
+#type = "calculate_dists"
+#better = "lower"
+
+[path]
+#pretrain_network_g = 'experiments\pretrain_g.pth'
+#pretrain_network_d = 'experiments\pretrain_d.pth'
+
+[network_g]
+type = "esrgan"
+num_in_ch = 1
+num_out_ch = 1
+num_feat = 64
+num_block = 23
+num_grow_ch = 32
+
+
+[network_d]
+type = "metagan"
+in_ch = 1
+
+[train]
+ema = 0.999
+wavelet_guided = true
+wavelet_init = 80000
+#sam = "fsam"
+#sam_init = 1000
+#eco = true
+#eco_init = 15000
+#match_lq_colors = true
+
+[train.optim_g]
+type = "adan_sf"
+lr = 8e-4
+betas = [ 0.98, 0.92, 0.99 ]
+weight_decay = 0.01
+schedule_free = true
+warmup_steps = 1600
+
+[train.optim_d]
+type = "adan_sf"
+lr = 1e-4
+betas = [ 0.98, 0.92, 0.99 ]
+weight_decay = 0.01
+schedule_free = true
+warmup_steps = 600
+
+#  losses
+[train.mssim_opt]
+type = "mssim_loss"
+loss_weight = 1.0
+
+#[train.consistency_opt]
+#type = "consistency_loss"
+#loss_weight = 1.0
+
+[train.ldl_opt]
+type = "ldl_loss"
+loss_weight = 1.0
+
+[train.fdl_opt]
+type = "fdl_loss"
+model = "vgg" # "resnet", "effnet", "inception"
+loss_weight = 0.5
+
+[train.gan_opt]
+type = "gan_loss"
+gan_type = "bce"
+loss_weight = 0.3
+
+#[train.msswd_opt]
+#type = "msswd_loss"
+#loss_weight = 1.0
+
+#[train.perceptual_opt]
+#type = "vgg_perceptual_loss"
+#loss_weight = 0.5
+#criterion = "huber"
+##patchloss = true
+##ipk = true
+##patch_weight = 1.0
+
+#[train.dists_opt]
+#type = "dists_loss"
+#loss_weight = 0.5
+
+#[train.ff_opt]
+#type = "ff_loss"
+#loss_weight = 0.35
+
+#[train.ncc_opt]
+#type = "ncc_loss"
+#loss_weight = 1.0
+
+#[train.kl_opt]
+#type = "kl_loss"
+#loss_weight = 1.0
+
+[logger]
+total_iter = 1000000
+save_checkpoint_freq = 1000
+use_tb_logger = true
+#save_tb_img = true
+#print_freq = 100
